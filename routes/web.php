@@ -1,5 +1,6 @@
 <?php
-
+use App\Http\Controllers\AdminControllers\DashboardController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 /*
@@ -15,5 +16,11 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
-Route::get('/categories/{category:slug}', [CategoryController::class, 'show'])->name('categories.show');
 Route::post('newsletter', [NewsletterController::class, 'store'])->name('newsletter_store');
+Route::name('admin.')->prefix('admin')->middleware(['auth', 'check_permissions'])->group(function(){
+
+    Route::get('/', [DashboardController::class, 'index'])->name('index');
+   
+});
+
+require __DIR__.'/auth.php';
