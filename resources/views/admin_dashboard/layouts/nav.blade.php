@@ -27,9 +27,9 @@
             </a>
 
             <ul>
-                <li> <a href=""><i class="bx bx-right-arrow-alt"></i>All Posts</a>
+                <li> <a href="{{ route('admin.posts.index') }}"><i class="bx bx-right-arrow-alt"></i>All Posts</a>
                 </li>
-                <li> <a href=""><i class="bx bx-right-arrow-alt"></i>Add New Post</a>
+                <li> <a href="{{ route('admin.posts.create') }}"><i class="bx bx-right-arrow-alt"></i>Add New Post</a>
                 </li>
                 
             </ul>
@@ -43,9 +43,9 @@
             </a>
 
             <ul>
-                <li> <a href=""><i class="bx bx-right-arrow-alt"></i>All Categories</a>
+                <li> <a href="{{ route('admin.categories.index') }}"><i class="bx bx-right-arrow-alt"></i>All Categories</a>
                 </li>
-                <li> <a href=""><i class="bx bx-right-arrow-alt"></i>Add New Category</a>
+                <li> <a href="{{ route('admin.categories.create') }}"><i class="bx bx-right-arrow-alt"></i>Add New Category</a>
                 </li>
                 
             </ul>
