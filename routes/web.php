@@ -19,7 +19,7 @@ use App\Http\Controllers\AdminControllers\AdminCategoriesController;
 |
 */
 Route::get('/migrate', function(){
-    \Artisan::call('migrate');
+    Artisan::call('migrate');
     dd('migrated!');
 });
 Route::get('/', [HomeController::class, 'index'])->name('home');
