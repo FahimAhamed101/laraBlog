@@ -17,7 +17,10 @@ use App\Http\Controllers\AdminControllers\AdminCategoriesController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/migrate', function(){
+    \Artisan::call('migrate');
+    dd('migrated!');
+});
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/posts/{post:slug}', [PostsController::class, 'show'])->name('posts.show');
 Route::post('/posts/{post:slug}', [PostsController::class, 'addComment'])->name('posts.add_comment');
