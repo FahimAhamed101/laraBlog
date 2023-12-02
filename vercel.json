@@ -14,7 +14,7 @@
         ]
       },
       {
-        "source": "/vercel_app_domain_name/(.*)",
+        "source": "/lara-blog-opal.vercel.app/(.*)",
         "headers": [
           { "key": "Access-Control-Allow-Origin", "value": "*" }
         ]
