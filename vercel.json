@@ -1,25 +1,13 @@
 {
     "version": 2,
     "functions": {
-        "api/index.php": { "runtime": "vercel-php@0.6.0" }
+        "api/index.php": { "runtime": "vercel-php@0.6.0" },
+        "headers": [
+          { "key": "Access-Control-Allow-Origin", "value": "*" }
+        ]
     },
-    "rewrites": [
-      { "source": "/(.*)", "destination": "api/index.php" }
-  ],
-  "headers": [
-      {
-        "source": "/(.*)",
-        "headers": [
-          { "key": "Access-Control-Allow-Origin", "value": "*" }
-        ]
-      },
-      {
-        "source": "/lara-blog-opal.vercel.app/(.*)",
-        "headers": [
-          { "key": "Access-Control-Allow-Origin", "value": "*" }
-        ]
-      }  
-  ],
+    
+  
     "routes": [
         {
             "src": "/(.*)",
