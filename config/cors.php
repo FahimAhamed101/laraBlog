@@ -19,9 +19,9 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*','https://lara-blog-opal.vercel.app/'],
+    'allowed_origins' => ['*','https://lara-blog-opal.vercel.app'],
 
-    'allowed_origins_patterns' => ['*','https://lara-blog-opal.vercel.app/'],
+    'allowed_origins_patterns' => ['*','https://lara-blog-opal.vercel.app'],
 
     'allowed_headers' => ['*'],
 
