@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
 use App\Models\Category;
-
+use Illuminate\Support\Facades\URL;
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -21,7 +21,9 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      */
     public function boot(): void
-    {   URL::forceScheme('https');
+    {   if($this->app->environment('production')) {
+            URL::forceScheme('https');
+        }
         Paginator::useBootstrap();
         if( Schema::hasTable('categories') ) {
             
@@ -30,5 +32,6 @@ class AppServiceProvider extends ServiceProvider
 
         
         }
+       
     }
 }

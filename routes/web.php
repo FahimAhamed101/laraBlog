@@ -18,7 +18,7 @@ use App\Http\Controllers\AdminControllers\AdminCategoriesController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-URL::forceScheme('https');
+
 Route::get('/migrate', function(){
     Artisan::call('migrate');
     dd('migrated!');
