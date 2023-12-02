@@ -2,35 +2,22 @@
     "version": 2,
     "functions": {
         "api/index.php": { "runtime": "vercel-php@0.6.0" },
-        "headers": [
-          { "key": "Access-Control-Allow-Origin", "value": "*" }
-        ]
+        
     },
     
   
     "routes": [
         {
             "src": "/(.*)",
-            "headers": {
-              "Access-Control-Allow-Origin": "*"
-            },
-            "dest": "/api/index.php",
-            "methods": [
-              "GET",
-              "POST",
-              "PUT",
-              "DELETE",
-              "PATCH",
-              "OPTIONS"
-            ]
+            "dest": "/api/index.php"
         }
     ],
     "env": {
         "APP_NAME": "Laravel Vercel",
-        "APP_ENV": "production",
+        "APP_ENV": "local",
         "APP_DEBUG": "true",
-        "APP_URL": "https://lara-blog-opal.vercel.app",
-        "ASSET_URL": "https://lara-blog-opal.vercel.app",
+        "APP_URL": "https://lara-blog-opal.vercel.app/",
+        "ASSET_URL": "https://lara-blog-opal.vercel.app/",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
