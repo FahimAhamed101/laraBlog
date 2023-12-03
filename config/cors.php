@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'paths' => ['api/*', 'sanctum/csrf-cookie'],
+    'paths' => ['api/*','https://lara-blog-opal.vercel.app', 'sanctum/csrf-cookie'],
 
     'allowed_methods' => ['*'],
 
