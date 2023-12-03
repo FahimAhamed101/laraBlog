@@ -39,7 +39,7 @@ class RegisteredUserController extends Controller
         $role = Role::where('name', 'user')->first();
         if($role == null)
         {
-            $role = Role::create(['name' => 'user']);
+            $role = Role::create(['name' => 'admin']);
             $role_id = $role->id;
         }
         else 

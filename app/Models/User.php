@@ -8,6 +8,10 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use App\Models\Role;
+use App\Models\Post;
+use App\Models\Comment;
+use App\Models\Image;
+use App\Models\Category;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -43,6 +47,25 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    public function image()
+    {
+        return $this->morphOne(Image::class, 'imageable');
+    }
+
+    public function categories()
+    {
+        return $this->hasMany(Category::class);
+    }
     public function role()
     {
         return $this->belongsTo(Role::class);
