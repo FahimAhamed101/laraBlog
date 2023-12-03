@@ -21,9 +21,9 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      */
     public function boot(): void
-    {   if(config('app.debug')!=true) {
-        \URL::forceScheme('https');
-      }
+    {    if(config('app.env') === 'production') {
+        URL::forceScheme('https');
+    }
         Paginator::useBootstrap();
         if( Schema::hasTable('categories') ) {
             
