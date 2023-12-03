@@ -7,7 +7,15 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "/api/index.php"
+            "dest": "/api/index.php",
+            "methods": [
+                "GET",
+                "POST",
+                "PUT",
+                "PATCH",
+                "OPTIONS",
+                "DELETE"
+              ]
         }
     ],
     "env": {
