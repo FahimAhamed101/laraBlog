@@ -18,12 +18,12 @@ class AppServiceProvider extends ServiceProvider
     }
 
     /**
-     * Bootstrap any application services.\URL::forceScheme('https');
+     * Bootstrap any application services.
      */
     public function boot(): void
     {   
        
-        
+        \URL::forceScheme('https');
         Paginator::useBootstrap();
         if( Schema::hasTable('categories') ) {
             
