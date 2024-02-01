@@ -80,7 +80,7 @@ return [
                 PDO::PGSQL_ATTR_SSLMODE => PDO::SSLMODE_REQUIRE,
                 'endpoint' => 'ep-mute-smoke-98984309-pooler.us-east-1.postgres.vercel-storage.com',
             ],
-
+        ],
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'url' => env('DATABASE_URL'),
