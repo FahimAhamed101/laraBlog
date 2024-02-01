@@ -24,6 +24,14 @@ class AppServiceProvider extends ServiceProvider
     {   
        
         \URL::forceScheme('https');
+        Paginator::useBootstrap();
+        if( Schema::hasTable('categories') ) {
+            
+            $categories = Category::withCount('posts')->orderBy('posts_count', 'DESC')->take(10)->get();
+            View::share('navbar_categories', $categories);
+
+        
+        }
        
     }
 }
