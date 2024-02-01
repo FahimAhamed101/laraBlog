@@ -64,23 +64,20 @@ return [
         ],
 
         'pgsql' => [
-            'url' => env('DATABASE_URL'),
             'driver' => 'pgsql',
-            'host' => 'ep-mute-smoke-98984309-pooler.us-east-1.postgres.vercel-storage.com',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
-            'database' => 'verceldb',
-            'username' => 'default',
-            'password' => 'dxawfXWpEb89',
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
             'search_path' => 'public',
-            'sslmode' => env('PGSQL_SSLMODE', 'require'),
-            'options' => [
-                PDO::PGSQL_ATTR_SSLMODE => PDO::SSLMODE_REQUIRE,
-                'endpoint' => 'ep-mute-smoke-98984309-pooler.us-east-1.postgres.vercel-storage.com',
-            ],
+            'sslmode' => 'prefer',
         ],
+
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'url' => env('DATABASE_URL'),
