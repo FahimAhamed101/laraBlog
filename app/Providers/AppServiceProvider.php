@@ -23,8 +23,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {   
        
-        
-        
+        \URL::forceScheme('https');
         Paginator::useBootstrap();
         if( Schema::hasTable('categories') ) {
             
