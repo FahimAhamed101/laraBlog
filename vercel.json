@@ -5,10 +5,10 @@
     },
    
     "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "/public/"
         
+        {
+            "src": "/public/(.*)",
+            "dest": "/public/$1"
         },
         {
             "src": "/(.*)",
