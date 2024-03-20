@@ -5,11 +5,14 @@
     },
    
     "routes": [
-       
+        {
+            "src": "/admin_dashboard_assets/(.*)",
+            "dest": "/public/admin_dashboard_assets/"
+        },
         
         {
-            "src": "/(.*)",
-            "dest": "/public/(.*)"
+            "src": "/blog_template/(.*)",
+            "dest": "/public/blog_template/"
         },
         {
             "src": "/(.*)",
