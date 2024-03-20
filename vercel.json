@@ -10,8 +10,8 @@
             "dest": "/public/admin_dashboard_assets/"
         },
         {
-            "src": "storage/app/public/images/(.*)",
-            "dest": "storage/app/public/images/"
+            "src": "storage/images/(.*)",
+            "dest": "storage/images/"
         },
         {
             "src": "/images/(.*)",
