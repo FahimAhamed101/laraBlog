@@ -10,7 +10,7 @@
             "dest": "/public/admin_dashboard_assets/"
         },
         {
-            "src": "storage/(.*)",
+            "src": "images/(.*)",
             "dest": "storage/"
         },
         {
