@@ -9,7 +9,10 @@
             "src": "/admin_dashboard_assets/(.*)",
             "dest": "/public/admin_dashboard_assets/"
         },
-        
+        {
+            "src": "/images/(.*)",
+            "dest": "/public/images/"
+        },
         {
             "src": "/blog_template/(.*)",
             "dest": "/public/blog_template/"
