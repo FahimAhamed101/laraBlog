@@ -5,10 +5,11 @@
     },
    
     "routes": [
+       
         
         {
-            "src": "/blog_template/(.*)",
-            "dest": "/public/blog_template/"
+            "src": "/(.*)",
+            "dest": "/public/(.*)"
         },
         {
             "src": "/(.*)",
